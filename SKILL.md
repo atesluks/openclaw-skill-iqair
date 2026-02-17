@@ -20,7 +20,35 @@ If the key is not set, guide the user:
 1. Visit https://dashboard.iqair.com/personal/api-keys
 2. Sign up/sign in and subscribe to the free Community plan
 3. Copy the API key
-4. Set it: `export IQAIR_API_KEY="your_key_here"`
+4. Add it to OpenClaw config using one of these methods:
+
+**Option A: Skill-specific (recommended for single skill)**
+```json
+{
+  "skills": {
+    "entries": {
+      "iqair": {
+        "env": {
+          "IQAIR_API_KEY": "your_key_here"
+        }
+      }
+    }
+  }
+}
+```
+
+**Option B: Global environment variables (recommended for multiple skills)**
+```json
+{
+  "env": {
+    "vars": {
+      "IQAIR_API_KEY": "your_key_here"
+    }
+  }
+}
+```
+
+You can use the gateway config.patch tool or edit `~/.openclaw/openclaw.json` directly.
 
 ## Quick Usage
 

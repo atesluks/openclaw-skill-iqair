@@ -23,14 +23,33 @@ cp -r iqair-openclaw-skill ~/.openclaw/workspace/skills/iqair
 
 ## Setup
 
-1. Get a free API key from IQAir Dashboard
-2. Set the environment variable:
-```bash
-export IQAIR_API_KEY="your_key_here"
+1. Get a free API key from the [IQAir Dashboard](https://dashboard.iqair.com/personal/api-keys) (free Community plan)
+2. Add it to your OpenClaw config (`~/.openclaw/openclaw.json`) using one of these methods:
+
+**Option A: Skill-specific (recommended for a single skill)**
+```json
+{
+  "skills": {
+    "entries": {
+      "iqair": {
+        "env": {
+          "IQAIR_API_KEY": "your_key_here"
+        }
+      }
+    }
+  }
+}
 ```
-3. Add to ~/.bashrc for persistence:
-```bash
-echo 'export IQAIR_API_KEY="your_key_here"' >> ~/.bashrc
+
+**Option B: Global environment variables (recommended for multiple skills)**
+```json
+{
+  "env": {
+    "vars": {
+      "IQAIR_API_KEY": "your_key_here"
+    }
+  }
+}
 ```
 
 ## Usage
