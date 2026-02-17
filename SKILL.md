@@ -1,6 +1,11 @@
 ---
 name: iqair
 description: Get real-time air quality data from IQAir API for any location worldwide. Returns AQI (Air Quality Index) with visual indicators and quality levels. Use when asked about air quality, pollution levels, or AQI in specific cities/locations (e.g., "How is the air in Riga?", "Is it safe to go outside in Beijing?", "What's the air quality like?"). Also use when asked about general weather to supplement weather data with air quality information (e.g., "What's the weather in Budapest?", "How's the weather today?").
+metadata:
+  openclaw:
+    homepage: https://github.com/atesluks/openclaw-skill-iqair
+    requires:
+      env: ["IQAIR_API_KEY"]
 ---
 
 # IQAir Air Quality Checker
