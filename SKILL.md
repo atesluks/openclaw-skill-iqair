@@ -54,19 +54,19 @@ You can use the gateway config.patch tool or edit `~/.openclaw/openclaw.json` di
 
 **By city name:**
 ```bash
-python scripts/get_aqi.py Riga Latvia
-python scripts/get_aqi.py London "United Kingdom"
-python scripts/get_aqi.py Budapest Hungary
+./scripts/get_aqi.py Riga Latvia
+./scripts/get_aqi.py London "United Kingdom"
+./scripts/get_aqi.py Budapest Hungary
 ```
 
 **By coordinates (most reliable):**
 ```bash
-python scripts/get_aqi.py --lat 56.9496 --lon 24.1052
+./scripts/get_aqi.py --lat 56.9496 --lon 24.1052
 ```
 
 **Nearest city (based on IP):**
 ```bash
-python scripts/get_aqi.py --nearest
+./scripts/get_aqi.py --nearest
 ```
 
 ## How to Respond to User Queries
@@ -83,7 +83,7 @@ User: "How good is air in Riga?"
 
 Response process:
 - Location: Riga, Latvia
-- Run: `python scripts/get_aqi.py Riga Latvia`
+- Run: `./scripts/get_aqi.py Riga Latvia`
 - Output: `🟢 19 - Good\nRiga, Latvia`
 - Reply: "Air quality in Riga is currently excellent! 🟢 19 (Good)"
 
